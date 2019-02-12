@@ -4,19 +4,18 @@
 public Dictionary<string, string> LineManufacturingCodes
 {
   //Line, MFG Code
-	"3M","";
-	"49797";
-	"AC","";
-	"ACC","";
+	//"3M",""; 'Line codes cannot have numbers for barcode search
+	"AC","16254";
+	//"ACC",""; 'No barcodes on record for this line code
 	"ACD","36666";
-	"ACE","";
-	"ACK","";
+	"ACE","31260";
+	//"ACK",""; 'No barcodes on record for this line code
 	"ADO","65454";
-	"ADP","";
-	"ADV","";
-	"AFP","";
-	"AIC","";
-	"AIR","";
+	//"ADP",""; 'No barcodes on record for this line code
+	//"ADV",""; 'No barcodes on record for this line code
+	"AFP","00440";
+	"AIC","18820";
+	//"AIR",""; 'No barcodes on record for this line code
 	"AIS","";
 	"AIT","";
 	"AKE","";
@@ -39,7 +38,8 @@ public Dictionary<string, string> LineManufacturingCodes
 	"AVB","";
 	"AVX","";
 	"AXT","";
-	"BA", "BAO","";
+	"BA","49797";
+	"BAO","";
 	"BAT","";
 	"BAV","";
 	"BAX","";
