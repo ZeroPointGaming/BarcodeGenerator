@@ -21,7 +21,7 @@ namespace BarcodeGeneration
         {
             InitializeComponent();
         }
-        
+
         //Handle text input to make sure we only allow numerical values
         private void textBox1_TextChanged(object sender, KeyPressEventArgs e)
         {
@@ -63,6 +63,31 @@ namespace BarcodeGeneration
         //Save barcode
         private void button2_Click(object sender, EventArgs e)
         {
+            Symbology CurrentSymbology = Symbology.UPCA;
+            Code = UnformattedBarcodeTextbox.Text;
+
+            //Switch between the encoding types
+            switch (comboBox1.SelectedItem)
+            {
+                case "UPC-A":
+                    CurrentSymbology = Symbology.UPCA;
+                    break;
+                case "EAN-13":
+                    CurrentSymbology = Symbology.EAN13;
+                    break;
+                case "ITF-14":
+                    CurrentSymbology = Symbology.ITF14;
+                    break;
+            }
+
+            BarCode Instance = new BarCode
+            {
+                Symbology = CurrentSymbology,
+                CodeToEncode = Code
+            };
+
+            pictureBox1.BackgroundImage = Instance.generateBarcodeToBitmap();
+
             if (pictureBox1.BackgroundImage != null)
             {
                 Clipboard.SetImage(pictureBox1.BackgroundImage);
@@ -116,5 +141,51 @@ namespace BarcodeGeneration
                     break;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Symbology CurrentSymbology = Symbology.UPCA;
+
+            //Switch between the encoding types
+            switch (comboBox1.SelectedItem)
+            {
+                case "UPC-A":
+                    CurrentSymbology = Symbology.UPCA;
+                    Code = UnformattedBarcodeTextbox.Text;
+                    break;
+                case "EAN-13":
+                    CurrentSymbology = Symbology.EAN13;
+                    Code = UnformattedBarcodeTextbox.Text;
+                    break;
+                case "ITF-14":
+                    CurrentSymbology = Symbology.ITF14;
+                    Code = UnformattedBarcodeTextbox.Text;
+                    break;
+            }
+
+            BarCode Instance = new BarCode
+            {
+                Symbology = CurrentSymbology,
+                CodeToEncode = Code
+            };
+
+            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
+            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
+            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
+            InfoPass.barcodenumber = UnformattedBarcodeTextbox.Text;
+            InfoPass.line = LineCodeTextbox.Text;
+            InfoPass.partnumber = PartNumberTextbox.Text;
+
+            PrintPages PrintedDocument = new PrintPages();
+            PrintedDocument.Show();
+        }
+    }
+
+    public static class InfoPass
+    {
+        public static string barcodenumber;
+        public static string line;
+        public static string partnumber;
+        public static Image Barcode;
     }
 }
