@@ -1,5 +1,5 @@
-# BarcodeGenerator
-Priavtized barcode generator for napa flowers
+//# BarcodeGenerator
+//Priavtized barcode generator for napa flowers
 
 public Dictionary<string, string>
 {
