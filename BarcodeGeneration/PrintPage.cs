@@ -56,18 +56,18 @@ namespace BarcodeGeneration
                 //New barcode labels system per coordinates
                 Image Barcode = Image.GetInstance(InfoPass.Barcode, System.Drawing.Imaging.ImageFormat.Png);
 
-                Barcode.SetAbsolutePosition(65, 38); //Row 7 Label 1 (50, 220) * appeared at the bottom left of the document :? (65, 38) ?Wtf is this coord system
+                Barcode.SetAbsolutePosition(65, 33); //Row 7 Label 1 (50, 220) * appeared at the bottom left of the document :? (65, 38) ?Wtf is this coord system
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(260, 38); //Row 7 Label 2 
+                Barcode.SetAbsolutePosition(260, 33); //Row 7 Label 2 
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(450, 38); //Row 7 Label 3
+                Barcode.SetAbsolutePosition(450, 33); //Row 7 Label 3
                 doc.Add(Barcode);
 
-                Barcode.SetAbsolutePosition(65, 147); //Row 6 Label 1 
+                Barcode.SetAbsolutePosition(65, 143); //Row 6 Label 1 
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(260, 147); //Row 6 Label 2 
+                Barcode.SetAbsolutePosition(260, 143); //Row 6 Label 2 
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(450, 147); //Row 6 Label 3 
+                Barcode.SetAbsolutePosition(450, 143); //Row 6 Label 3 
                 doc.Add(Barcode);
 
                 Barcode.SetAbsolutePosition(65, 255); //Row 5 Label 1 
@@ -98,11 +98,11 @@ namespace BarcodeGeneration
                 Barcode.SetAbsolutePosition(450, 583); //Row 2 Label 3 
                 doc.Add(Barcode);
 
-                Barcode.SetAbsolutePosition(65, 689); //Row 1 Label 1 
+                Barcode.SetAbsolutePosition(65, 694); //Row 1 Label 1 
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(260, 689); //Row 1 Label 2 
+                Barcode.SetAbsolutePosition(260, 694); //Row 1 Label 2 
                 doc.Add(Barcode);
-                Barcode.SetAbsolutePosition(450, 689); //Row 1 Label 3 
+                Barcode.SetAbsolutePosition(450, 694); //Row 1 Label 3 
                 doc.Add(Barcode);
 
                 doc.Close();
