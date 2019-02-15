@@ -175,6 +175,7 @@ namespace BarcodeGeneration
             InfoPass.barcodenumber = UnformattedBarcodeTextbox.Text;
             InfoPass.line = LineCodeTextbox.Text;
             InfoPass.partnumber = PartNumberTextbox.Text;
+            InfoPass.Type = CurrentSymbology;
 
             PrintPages PrintedDocument = new PrintPages();
             PrintedDocument.Show();
@@ -187,5 +188,6 @@ namespace BarcodeGeneration
         public static string line;
         public static string partnumber;
         public static Image Barcode;
+        public static Symbology Type;
     }
 }
