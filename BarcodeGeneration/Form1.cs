@@ -31,71 +31,11 @@ namespace BarcodeGeneration
             }
         }
 
-        //Create barcode
+        //Create barcode Static String
         string Code = "";
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Symbology CurrentSymbology = Symbology.UPCA;
-                        
-            //Switch between the encoding types
-            switch (comboBox1.SelectedItem)
-            {
-                case "UPC-A":
-                    CurrentSymbology = Symbology.UPCA;
-                    break;
-                case "EAN-13":
-                    CurrentSymbology = Symbology.EAN13;
-                    break;
-                case "ITF-14":
-                    CurrentSymbology = Symbology.ITF14;
-                    break;
-            }
-
-            BarCode Instance = new BarCode
-            {
-                Symbology = CurrentSymbology,
-                CodeToEncode = Code
-            };
-
-            pictureBox1.BackgroundImage = Instance.generateBarcodeToBitmap();
-        }
-
-        //Save barcode
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Symbology CurrentSymbology = Symbology.UPCA;
-            Code = UnformattedBarcodeTextbox.Text;
-
-            //Switch between the encoding types
-            switch (comboBox1.SelectedItem)
-            {
-                case "UPC-A":
-                    CurrentSymbology = Symbology.UPCA;
-                    break;
-                case "EAN-13":
-                    CurrentSymbology = Symbology.EAN13;
-                    break;
-                case "ITF-14":
-                    CurrentSymbology = Symbology.ITF14;
-                    break;
-            }
-
-            BarCode Instance = new BarCode
-            {
-                Symbology = CurrentSymbology,
-                CodeToEncode = Code
-            };
-
-            pictureBox1.BackgroundImage = Instance.generateBarcodeToBitmap();
-
-            if (pictureBox1.BackgroundImage != null)
-            {
-                Clipboard.SetImage(pictureBox1.BackgroundImage);
-            }
-        }
 
         //Generate a barcode with a unformatted barcode number
-        private void button3_Click(object sender, EventArgs e)
+        private void GeneratePreviewBtn_Click(object sender, EventArgs e)
         {
             Symbology CurrentSymbology = Symbology.UPCA;
 
@@ -142,7 +82,7 @@ namespace BarcodeGeneration
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void CreatePdfBtn_Click(object sender, EventArgs e)
         {
             Symbology CurrentSymbology = Symbology.UPCA;
 
@@ -173,21 +113,70 @@ namespace BarcodeGeneration
             InfoPass.Barcode = Instance.generateBarcodeToBitmap();
             InfoPass.Barcode = Instance.generateBarcodeToBitmap();
             InfoPass.barcodenumber = UnformattedBarcodeTextbox.Text;
-            InfoPass.line = LineCodeTextbox.Text;
-            InfoPass.partnumber = PartNumberTextbox.Text;
+            InfoPass.DocumentTitle = DocumentTitleTextbox.Text;
             InfoPass.Type = CurrentSymbology;
 
             PrintPages PrintedDocument = new PrintPages();
             PrintedDocument.Show();
+        }
+
+        //Add barcode to the listbox button
+        private void AddBarcodeToList_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count < 22)
+            {
+                listBox1.Items.Add(UnformattedBarcodeTextbox.Text);
+            }
+            else { MessageBox.Show("Maximum number of barcodes reached for current page."); }
+        }
+
+        //Remove selected barcode button
+        private void RemoveBarcodeBtn_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null) { listBox1.Items.RemoveAt(listBox1.SelectedIndex); }
+        }
+
+        //Save the barcodes to a list incase of undo and clear the listbox
+        private void ClearBarcodeListBtn_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        //Undo clearing the barcode list
+        private void UndoClearBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
     public static class InfoPass
     {
         public static string barcodenumber;
-        public static string line;
-        public static string partnumber;
+        public static string DocumentTitle;
         public static Image Barcode;
         public static Symbology Type;
+
+        //Barcodes 1-21 In order from top to bottom
+        public static Image Barcode1;
+        public static Image Barcode2;
+        public static Image Barcode3;
+        public static Image Barcode4;
+        public static Image Barcode5;
+        public static Image Barcode6;
+        public static Image Barcode7;
+        public static Image Barcode8;
+        public static Image Barcode9;
+        public static Image Barcode10;
+        public static Image Barcode11;
+        public static Image Barcode12;
+        public static Image Barcode13;
+        public static Image Barcode14;
+        public static Image Barcode15;
+        public static Image Barcode16;
+        public static Image Barcode17;
+        public static Image Barcode18;
+        public static Image Barcode19;
+        public static Image Barcode20;
+        public static Image Barcode21;
     }
 }

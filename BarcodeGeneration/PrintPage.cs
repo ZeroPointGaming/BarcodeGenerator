@@ -28,7 +28,7 @@ namespace BarcodeGeneration
         {
             try
             {
-                label1.Text = InfoPass.line + " - " + InfoPass.partnumber;
+                label1.Text = InfoPass.DocumentTitle.ToString();
 
                 foreach (Control x in this.Controls)
                 {
@@ -51,7 +51,7 @@ namespace BarcodeGeneration
             try
             {
                 string pdfpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                iTextSharp.text.pdf.PdfWriter.GetInstance(doc, new FileStream(pdfpath + "/" + InfoPass.line.ToString() + " - " + InfoPass.partnumber.ToString() + ".pdf", FileMode.Create));
+                iTextSharp.text.pdf.PdfWriter.GetInstance(doc, new FileStream(pdfpath + "/" + InfoPass.DocumentTitle.ToString() + ".pdf", FileMode.Create));
 
                 doc.Open();
 
@@ -217,8 +217,8 @@ namespace BarcodeGeneration
                 
 
                 doc.Close();
-                MessageBox.Show("PDF Document Created @ " + pdfpath + "/" + InfoPass.line.ToString() + " - " + InfoPass.partnumber.ToString() + ".pdf" + Environment.NewLine + "This document can be printed on the orange napa sticky labels.");
-                Process.Start(pdfpath + "/" + InfoPass.line.ToString() + " - " + InfoPass.partnumber.ToString() + ".pdf");
+                MessageBox.Show("PDF Document Created @ " + pdfpath + "/" + InfoPass.DocumentTitle.ToString() + ".pdf" + Environment.NewLine + "This document can be printed on the orange napa sticky labels.");
+                Process.Start(pdfpath + "/" + InfoPass.DocumentTitle.ToString() + ".pdf");
             }
             catch (Exception ex)
             {
