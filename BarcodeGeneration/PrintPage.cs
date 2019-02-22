@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text;
 using KeepAutomation.Barcode;
+using KeepAutomation.Barcode.Bean;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -250,7 +251,7 @@ namespace BarcodeGeneration
             }
             catch (Exception ex)
             {
-                //Log error;
+                MessageBox.Show("There was an error creating a printable document!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString())
             }
 
             
@@ -260,7 +261,23 @@ namespace BarcodeGeneration
         //Refresh Barcode 1 Button
         private void RefreshBarcode1Btn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type1;
 
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber1
+                };
+
+                InfoPass.Barcode1 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
         }
     }
 }
