@@ -28,8 +28,9 @@ namespace BarcodeGeneration
         {
             try
             {
-                label1.Text = InfoPass.DocumentTitle.ToString();
+                this.Text = InfoPass.DocumentTitle.ToString();
 
+                /*
                 foreach (Control x in this.Controls)
                 {
                     if (x is PictureBox)
@@ -37,6 +38,30 @@ namespace BarcodeGeneration
                         ((PictureBox)x).BackgroundImage = InfoPass.Barcode;
                     }
                 }
+                */
+
+                ///New Method for individual barcodes instead of whole page.
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode1;
+                Barcode2Preview.BackgroundImage = InfoPass.Barcode2;
+                Barcode3Preview.BackgroundImage = InfoPass.Barcode3;
+                Barcode4Preview.BackgroundImage = InfoPass.Barcode4;
+                Barcode5Preview.BackgroundImage = InfoPass.Barcode5;
+                Barcode6Preview.BackgroundImage = InfoPass.Barcode6;
+                Barcode7Preview.BackgroundImage = InfoPass.Barcode7;
+                Barcode8Preview.BackgroundImage = InfoPass.Barcode8;
+                Barcode9Preview.BackgroundImage = InfoPass.Barcode9;
+                Barcode10Preview.BackgroundImage = InfoPass.Barcode10;
+                Barcode11Preview.BackgroundImage = InfoPass.Barcode11;
+                Barcode12Preview.BackgroundImage = InfoPass.Barcode12;
+                Barcode13Preview.BackgroundImage = InfoPass.Barcode13;
+                Barcode14Preview.BackgroundImage = InfoPass.Barcode14;
+                Barcode15Preview.BackgroundImage = InfoPass.Barcode15;
+                Barcode16Preview.BackgroundImage = InfoPass.Barcode16;
+                Barcode17Preview.BackgroundImage = InfoPass.Barcode17;
+                Barcode18Preview.BackgroundImage = InfoPass.Barcode18;
+                Barcode19Preview.BackgroundImage = InfoPass.Barcode19;
+                Barcode20Preview.BackgroundImage = InfoPass.Barcode20;
+                Barcode21Preview.BackgroundImage = InfoPass.Barcode21;
             }
             catch
             {
@@ -104,10 +129,13 @@ namespace BarcodeGeneration
                         Barcode.SetAbsolutePosition(450, 585); //Row 2 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode1, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 696); //Row 1 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode2, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 696); //Row 1 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode3, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 696); //Row 1 Label 3 
                         doc.Add(Barcode);
                         break;
@@ -227,6 +255,12 @@ namespace BarcodeGeneration
 
             
             this.Dispose();
+        }
+
+        //Refresh Barcode 1 Button
+        private void RefreshBarcode1Btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
