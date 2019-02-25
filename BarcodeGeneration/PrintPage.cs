@@ -88,24 +88,33 @@ namespace BarcodeGeneration
                 {
                     //Correct coordinate positioning for UPC-A (12 digit) barcodes
                     case Symbology.UPCA:
+                        //Barcode = Image.GetInstance(InfoPass.Barcode19, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 30); //Row 7 Label 1 (50, 220) * appeared at the bottom left of the document :? (65, 38) ?Wtf is this coord system
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode20, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 30); //Row 7 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode21, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 30); //Row 7 Label 3
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode16, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 140); //Row 6 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode17, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 140); //Row 6 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode18, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 140); //Row 6 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode13, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 252); //Row 5 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode14, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 252); //Row 5 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode15, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 252); //Row 5 Label 3 
                         doc.Add(Barcode);
 
@@ -151,96 +160,135 @@ namespace BarcodeGeneration
                         break;
                     //Correct coordinate positioning for EAN-13 (13 digit) barcodes
                     case Symbology.EAN13:
+                        //Barcode = Image.GetInstance(InfoPass.Barcode19, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 30); //Row 7 Label 1 (50, 220) * appeared at the bottom left of the document :? (65, 38) ?Wtf is this coord system
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode20, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 30); //Row 7 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode21, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 30); //Row 7 Label 3
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode16, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 140); //Row 6 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode17, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 140); //Row 6 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode18, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 140); //Row 6 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode13, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 252); //Row 5 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode14, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 252); //Row 5 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode15, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 252); //Row 5 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode10, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 364); //Row 4 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode11, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 364); //Row 4 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode12, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 364); //Row 4 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode7, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 475); //Row 3 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode8, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 475); //Row 3 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode9, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 475); //Row 3 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode4, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 585); //Row 2 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode5, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 585); //Row 2 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode6, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 585); //Row 2 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode1, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 670); //Row 1 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode2, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 670); //Row 1 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode3, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 670); //Row 1 Label 3 
                         doc.Add(Barcode);
                         break;
                     //Correct coordinate positioning for ITF-14 (14 digit) barcodes
                     case Symbology.ITF14:
+                        //Barcode = Image.GetInstance(InfoPass.Barcode19, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 27); //Row 7 Label 1 (50, 220) * appeared at the bottom left of the document :? (65, 38) ?Wtf is this coord system
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode20, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 27); //Row 7 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode21, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 27); //Row 7 Label 3
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode16, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 138); //Row 6 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode17, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 138); //Row 6 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode18, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 138); //Row 6 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode13, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 250); //Row 5 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode14, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 250); //Row 5 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode15, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 250); //Row 5 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode10, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 363); //Row 4 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode11, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 363); //Row 4 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode12, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 363); //Row 4 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode7, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 474); //Row 3 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode8, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 474); //Row 3 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode9, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 474); //Row 3 Label 3 
                         doc.Add(Barcode);
 
+                        //Barcode = Image.GetInstance(InfoPass.Barcode4, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(65, 585); //Row 2 Label 1 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode5, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(260, 585); //Row 2 Label 2 
                         doc.Add(Barcode);
+                        //Barcode = Image.GetInstance(InfoPass.Barcode6, System.Drawing.Imaging.ImageFormat.Png);
                         Barcode.SetAbsolutePosition(450, 585); //Row 2 Label 3 
                         doc.Add(Barcode);
 

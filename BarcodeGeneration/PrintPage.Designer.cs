@@ -902,7 +902,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(891, 712);
+            this.ClientSize = new System.Drawing.Size(710, 712);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.RefreshBarcode21Btn);
             this.Controls.Add(this.RefreshBarcode20Btn);
