@@ -822,6 +822,7 @@
             this.RefreshBarcode16Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode16Btn.TabIndex = 101;
             this.RefreshBarcode16Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode16Btn.Click += new System.EventHandler(this.RefreshBarcode16Btn_Click);
             // 
             // label16
             // 
