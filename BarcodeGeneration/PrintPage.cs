@@ -579,7 +579,7 @@ namespace BarcodeGeneration
         }
 
         /// <summary>
-        /// This button refreshes the eleventh barcode on the print preview page.
+        /// This button event handler refreshes the eleventh barcode on the print preview page.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -727,6 +727,58 @@ namespace BarcodeGeneration
 
                 InfoPass.Barcode16 = Instance.generateBarcodeToBitmap();
                 Barcode1Preview.BackgroundImage = InfoPass.Barcode16;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// This button event hanlder refreshes the seventeenth barcode on the print preview page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBarcode17Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type17;
+
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber17
+                };
+
+                InfoPass.Barcode17 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode17;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// This button event handler refreshes the eighteenth barcode on the print preview page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBarcode18Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type18;
+
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber18
+                };
+
+                InfoPass.Barcode18 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode18;
             }
             catch (Exception ex)
             {
