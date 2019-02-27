@@ -559,6 +559,7 @@
             this.RefreshBarcode5Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode5Btn.TabIndex = 78;
             this.RefreshBarcode5Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode5Btn.Click += new System.EventHandler(this.RefreshBarcode5Btn_Click);
             // 
             // RefreshBarcode4Btn
             // 
