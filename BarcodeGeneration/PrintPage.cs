@@ -15,32 +15,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Image = iTextSharp.text.Image;
 
+/// <summary>
+/// This namespace contains all the classes and resources connected to the barcode generation software.
+/// </summary>
 namespace BarcodeGeneration
 {
     public partial class PrintPages : Form
     {
+        /// <summary>
+        /// Initialize the form with the form constructer and initialization component.
+        /// </summary>
         public PrintPages()
         {
             InitializeComponent();
         }
 
-        //Load all the image boxes with the labels
+        /// <summary>
+        /// Load all the image boxes with the labels
+        /// </summary>
         private void PrintPage_Load(object sender, EventArgs e)
         {
             try
             {
                 this.Text = InfoPass.DocumentTitle.ToString();
-
-                /*
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox)
-                    {
-                        ((PictureBox)x).BackgroundImage = InfoPass.Barcode;
-                    }
-                }
-                */
-
                 ///New Method for individual barcodes instead of whole page.
                 Barcode1Preview.BackgroundImage = InfoPass.Barcode1;
                 Barcode2Preview.BackgroundImage = InfoPass.Barcode2;
@@ -64,13 +61,15 @@ namespace BarcodeGeneration
                 Barcode20Preview.BackgroundImage = InfoPass.Barcode20;
                 Barcode21Preview.BackgroundImage = InfoPass.Barcode21;
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("There was an error loading the barcodes! " + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
             }
         }
 
-        //Print the document
+        /// <summary>
+        /// This function prints the document to a pdf file by correctly aligning all the images on the pdf file we can then print the pdf file on a sticky label sheet.
+        /// </summary>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {            
             Document doc = new Document(PageSize.LETTER, 0, 0, 0, 0);

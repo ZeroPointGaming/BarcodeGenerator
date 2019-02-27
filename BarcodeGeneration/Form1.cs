@@ -17,12 +17,19 @@ namespace BarcodeGeneration
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Form 1 initialization constructor
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
-        //Handle text input to make sure we only allow numerical values
+        /// <summary>
+        /// Handle text input to make sure we only allow numerical values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_TextChanged(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -31,10 +38,16 @@ namespace BarcodeGeneration
             }
         }
 
-        //Create barcode Static String
+        /// <summary>
+        /// local barcode string for storing a temp barcode number string for processing.
+        /// </summary>
         string Code = "";
 
-        //Generate a barcode with a unformatted barcode number
+        /// <summary>
+        /// Generate a barcode preview button event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GeneratePreviewBtn_Click(object sender, EventArgs e)
         {
             Symbology CurrentSymbology = Symbology.UPCA;
@@ -65,6 +78,11 @@ namespace BarcodeGeneration
             pictureBox1.BackgroundImage = Instance.generateBarcodeToBitmap();
         }
 
+        /// <summary>
+        /// Combo box selection changed event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Switch between the encoding types
@@ -82,6 +100,11 @@ namespace BarcodeGeneration
             }
         }
 
+        /// <summary>
+        /// Create pdf button event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreatePdfBtn_Click(object sender, EventArgs e)
         {
             Symbology CurrentSymbology = Symbology.UPCA;
@@ -285,10 +308,6 @@ namespace BarcodeGeneration
                 }
             }
 
-            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
-            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
-            InfoPass.Barcode = Instance.generateBarcodeToBitmap();
-            InfoPass.barcodenumber = UnformattedBarcodeTextbox.Text;
             InfoPass.DocumentTitle = DocumentTitleTextbox.Text;
             InfoPass.Type = CurrentSymbology;
 
@@ -296,46 +315,83 @@ namespace BarcodeGeneration
             PrintedDocument.Show();
         }
 
-        //Add barcode to the listbox button
+        /// <summary>
+        /// Add barcode to the listbox button event handler
+        /// </summary>
         private void AddBarcodeToList_Click(object sender, EventArgs e)
         {
-            if (listBox1.Items.Count < 22)
+            if (listBox1.Items.Count <= 20)
             {
                 listBox1.Items.Add(UnformattedBarcodeTextbox.Text);
             }
             else { MessageBox.Show("Maximum number of barcodes reached for current page."); }
         }
 
-        //Remove selected barcode button
+        /// <summary>
+        /// Remove selected barcode button event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveBarcodeBtn_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null) { listBox1.Items.RemoveAt(listBox1.SelectedIndex); }
         }
 
-        //Save the barcodes to a list incase of undo and clear the listbox
+        /// <summary>
+        /// Save the barcodes to a list incase of undo and clear the listbox button event handler.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClearBarcodeListBtn_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
         }
 
-        //Undo clearing the barcode list
+        /// <summary>
+        /// Undo clearing the barcode list button event handler.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UndoClearBtn_Click(object sender, EventArgs e)
         {
 
         }
     }
 
+    /// <summary>
+    /// This is a static data structure class for passing data between two forms.
+    /// </summary>
     public static class InfoPass
     {
-        public static string barcodenumber;
+        /// <summary>
+        /// Static string for the pdf document title
+        /// </summary>
         public static string DocumentTitle;
+
+        /// <summary>
+        /// Static instance of barcode for whole page single barcode printing 
+        /// </summary>
+        [Obsolete("Barcodes are no longer printed by the page basis. This variable is being worked out of the system!")]
         public static Image Barcode;
+
+        /// <summary>
+        /// Global barcode page type for correct coordinate formatting.
+        /// </summary>
         public static Symbology Type;
 
-        //Barcodes 1-21 In order from top to bottom
+        /// <summary>
+        /// Barcode #1 Static Image instance
+        /// </summary>
         public static Image Barcode1;
+        /// <summary>
+        /// Barcode #1 Static barcode number string
+        /// </summary>
         public static string barcodenumber1;
+        /// <summary>
+        /// Barcode #1 Static barcode type enumerator
+        /// </summary>
         public static Symbology type1;
+
         public static Image Barcode2;
         public static string barcodenumber2;
         public static Symbology type2;
