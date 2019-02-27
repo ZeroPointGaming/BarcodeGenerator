@@ -885,6 +885,7 @@
             this.RefreshBarcode19Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode19Btn.TabIndex = 107;
             this.RefreshBarcode19Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode19Btn.Click += new System.EventHandler(this.RefreshBarcode19Btn_Click);
             // 
             // label19
             // 
