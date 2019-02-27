@@ -524,6 +524,7 @@
             this.RefreshBarcode2Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode2Btn.TabIndex = 72;
             this.RefreshBarcode2Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode2Btn.Click += new System.EventHandler(this.RefreshBarcode2Btn_Click);
             // 
             // RefreshBarcode3Btn
             // 
@@ -535,6 +536,7 @@
             this.RefreshBarcode3Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode3Btn.TabIndex = 73;
             this.RefreshBarcode3Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode3Btn.Click += new System.EventHandler(this.RefreshBarcode3Btn_Click);
             // 
             // RefreshBarcode6Btn
             // 

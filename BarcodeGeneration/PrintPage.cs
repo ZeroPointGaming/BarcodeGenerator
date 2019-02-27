@@ -318,7 +318,11 @@ namespace BarcodeGeneration
             this.Dispose();
         }
 
-        //Refresh Barcode 1 Button
+        /// <summary>
+        /// This button event handler refreshes the first barcode on the print preview page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshBarcode1Btn_Click(object sender, EventArgs e)
         {
             try
@@ -333,6 +337,58 @@ namespace BarcodeGeneration
 
                 InfoPass.Barcode1 = Instance.generateBarcodeToBitmap();
                 Barcode1Preview.BackgroundImage = InfoPass.Barcode1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
+        }
+        
+        /// <summary>
+        /// This button event handler refreshes the second barcode on the print preview page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBarcode2Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type2;
+
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber2
+                };
+
+                InfoPass.Barcode2 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode2;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// This button event handler refreshes the third barcode on the print preview page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBarcode3Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type3;
+
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber3
+                };
+
+                InfoPass.Barcode3 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode3;
             }
             catch (Exception ex)
             {
