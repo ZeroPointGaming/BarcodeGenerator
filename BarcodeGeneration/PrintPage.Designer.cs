@@ -633,6 +633,7 @@
             this.RefreshBarcode7Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode7Btn.TabIndex = 83;
             this.RefreshBarcode7Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode7Btn.Click += new System.EventHandler(this.RefreshBarcode7Btn_Click);
             // 
             // label7
             // 
