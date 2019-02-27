@@ -674,6 +674,7 @@
             this.RefreshBarcode12Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode12Btn.TabIndex = 91;
             this.RefreshBarcode12Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode12Btn.Click += new System.EventHandler(this.RefreshBarcode12Btn_Click);
             // 
             // RefreshBarcode11Btn
             // 
