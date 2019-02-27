@@ -681,5 +681,31 @@ namespace BarcodeGeneration
                 MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
             }
         }
+
+        /// <summary>
+        /// This button event handler refreshes the fifteenth barcode on the print preview page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RefreshBarcode15Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Symbology CurrentSymbology = InfoPass.type15;
+
+                BarCode Instance = new BarCode
+                {
+                    Symbology = CurrentSymbology,
+                    CodeToEncode = InfoPass.barcodenumber15
+                };
+
+                InfoPass.Barcode15 = Instance.generateBarcodeToBitmap();
+                Barcode1Preview.BackgroundImage = InfoPass.Barcode15;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error regenerating the barcode!" + Environment.NewLine + "Stack Trace: " + Environment.NewLine + ex.ToString());
+            }
+        }
     }
 }
