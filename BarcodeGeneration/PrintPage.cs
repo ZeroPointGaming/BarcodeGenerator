@@ -362,7 +362,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode2 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode2;
+                Barcode2Preview.BackgroundImage = InfoPass.Barcode2;
             }
             catch (Exception ex)
             {
@@ -388,7 +388,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode3 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode3;
+                Barcode3Preview.BackgroundImage = InfoPass.Barcode3;
             }
             catch (Exception ex)
             {
@@ -414,7 +414,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode4 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode4;
+                Barcode4Preview.BackgroundImage = InfoPass.Barcode4;
             }
             catch (Exception ex)
             {
@@ -440,7 +440,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode5 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode5;
+                Barcode5Preview.BackgroundImage = InfoPass.Barcode5;
             }
             catch (Exception ex)
             {
@@ -466,7 +466,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode6 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode6;
+                Barcode6Preview.BackgroundImage = InfoPass.Barcode6;
             }
             catch (Exception ex)
             {
@@ -492,7 +492,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode7 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode7;
+                Barcode7Preview.BackgroundImage = InfoPass.Barcode7;
             }
             catch (Exception ex)
             {
@@ -518,7 +518,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode8 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode8;
+                Barcode8Preview.BackgroundImage = InfoPass.Barcode8;
             }
             catch (Exception ex)
             {
@@ -544,7 +544,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode9 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode9;
+                Barcode9Preview.BackgroundImage = InfoPass.Barcode9;
             }
             catch (Exception ex)
             {
@@ -570,7 +570,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode10 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode10;
+                Barcode10Preview.BackgroundImage = InfoPass.Barcode10;
             }
             catch (Exception ex)
             {
@@ -596,7 +596,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode11 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode11;
+                Barcode11Preview.BackgroundImage = InfoPass.Barcode11;
             }
             catch (Exception ex)
             {
@@ -622,7 +622,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode12 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode12;
+                Barcode12Preview.BackgroundImage = InfoPass.Barcode12;
             }
             catch (Exception ex)
             {
@@ -648,7 +648,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode13 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode13;
+                Barcode13Preview.BackgroundImage = InfoPass.Barcode13;
             }
             catch (Exception ex)
             {
@@ -674,7 +674,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode14 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode14;
+                Barcode14Preview.BackgroundImage = InfoPass.Barcode14;
             }
             catch (Exception ex)
             {
@@ -700,7 +700,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode15 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode15;
+                Barcode15Preview.BackgroundImage = InfoPass.Barcode15;
             }
             catch (Exception ex)
             {
@@ -726,7 +726,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode16 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode16;
+                Barcode16Preview.BackgroundImage = InfoPass.Barcode16;
             }
             catch (Exception ex)
             {
@@ -752,7 +752,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode17 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode17;
+                Barcode17Preview.BackgroundImage = InfoPass.Barcode17;
             }
             catch (Exception ex)
             {
@@ -778,7 +778,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode18 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode18;
+                Barcode18Preview.BackgroundImage = InfoPass.Barcode18;
             }
             catch (Exception ex)
             {
@@ -804,7 +804,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode19 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode19;
+                Barcode19Preview.BackgroundImage = InfoPass.Barcode19;
             }
             catch (Exception ex)
             {
@@ -830,7 +830,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode20 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode20;
+                Barcode20Preview.BackgroundImage = InfoPass.Barcode20;
             }
             catch (Exception ex)
             {
@@ -856,7 +856,7 @@ namespace BarcodeGeneration
                 };
 
                 InfoPass.Barcode21 = Instance.generateBarcodeToBitmap();
-                Barcode1Preview.BackgroundImage = InfoPass.Barcode21;
+                Barcode21Preview.BackgroundImage = InfoPass.Barcode21;
             }
             catch (Exception ex)
             {
