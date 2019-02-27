@@ -611,6 +611,7 @@
             this.RefreshBarcode9Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode9Btn.TabIndex = 85;
             this.RefreshBarcode9Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode9Btn.Click += new System.EventHandler(this.RefreshBarcode9Btn_Click);
             // 
             // RefreshBarcode8Btn
             // 
@@ -622,6 +623,7 @@
             this.RefreshBarcode8Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode8Btn.TabIndex = 84;
             this.RefreshBarcode8Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode8Btn.Click += new System.EventHandler(this.RefreshBarcode8Btn_Click);
             // 
             // RefreshBarcode7Btn
             // 
@@ -694,6 +696,7 @@
             this.RefreshBarcode10Btn.Size = new System.Drawing.Size(23, 20);
             this.RefreshBarcode10Btn.TabIndex = 89;
             this.RefreshBarcode10Btn.UseVisualStyleBackColor = true;
+            this.RefreshBarcode10Btn.Click += new System.EventHandler(this.RefreshBarcode10Btn_Click);
             // 
             // label10
             // 
