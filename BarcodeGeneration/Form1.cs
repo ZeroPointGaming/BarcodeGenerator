@@ -114,7 +114,7 @@ namespace BarcodeGeneration
             {
                 switch (i)
                 {
-                    case 1:
+                    case 0:
                         Instance.CodeToEncode = listBox1.Items[i].ToString();
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type1 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type1 = Instance.Symbology; }
@@ -122,7 +122,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode1 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber1 = listBox1.Items[i].ToString();
                         break;
-                    case 2:
+                    case 1:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type2 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type2 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type2 = Instance.Symbology; }
@@ -130,7 +130,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode2 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber2 = listBox1.Items[i].ToString();
                         break;
-                    case 3:
+                    case 2:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type3 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type3 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type3 = Instance.Symbology; }
@@ -138,7 +138,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode3 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber3 = listBox1.Items[i].ToString();
                         break;
-                    case 4:
+                    case 3:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type4 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type4 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type4 = Instance.Symbology; }
@@ -146,7 +146,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode4 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber4 = listBox1.Items[i].ToString();
                         break;
-                    case 5:
+                    case 4:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type5 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type5 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type5 = Instance.Symbology; }
@@ -154,7 +154,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode5 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber5 = listBox1.Items[i].ToString();
                         break;
-                    case 6:
+                    case 5:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type6 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type6 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type6 = Instance.Symbology; }
@@ -162,7 +162,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode6 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber6 = listBox1.Items[i].ToString();
                         break;
-                    case 7:
+                    case 6:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type7 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type7 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type7 = Instance.Symbology; }
@@ -170,7 +170,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode7 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber7 = listBox1.Items[i].ToString();
                         break;
-                    case 8:
+                    case 7:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type8 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type8 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type8 = Instance.Symbology; }
@@ -178,7 +178,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode8 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber8 = listBox1.Items[i].ToString();
                         break;
-                    case 9:
+                    case 8:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type9 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type9 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type9 = Instance.Symbology; }
@@ -186,7 +186,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode9 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber9 = listBox1.Items[i].ToString();
                         break;
-                    case 10:
+                    case 9:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type10 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type10 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type10 = Instance.Symbology; }
@@ -194,7 +194,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode10 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber10 = listBox1.Items[i].ToString();
                         break;
-                    case 11:
+                    case 10:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type11 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type11 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type11 = Instance.Symbology; }
@@ -202,7 +202,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode11 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber11 = listBox1.Items[i].ToString();
                         break;
-                    case 12:
+                    case 11:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type12 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type12 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type12 = Instance.Symbology; }
@@ -210,7 +210,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode12 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber12 = listBox1.Items[i].ToString();
                         break;
-                    case 13:
+                    case 12:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type13 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type13 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type13 = Instance.Symbology; }
@@ -218,7 +218,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode13 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber13 = listBox1.Items[i].ToString();
                         break;
-                    case 14:
+                    case 13:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type14 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type14 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type14 = Instance.Symbology; }
@@ -226,7 +226,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode14 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber14 = listBox1.Items[i].ToString();
                         break;
-                    case 15:
+                    case 14:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type15 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type15 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type15 = Instance.Symbology; }
@@ -234,7 +234,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode15 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber15 = listBox1.Items[i].ToString();
                         break;
-                    case 16:
+                    case 15:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type16 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type16 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type16 = Instance.Symbology; }
@@ -242,7 +242,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode16 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber16  = listBox1.Items[i].ToString();
                         break;
-                    case 17:
+                    case 16:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type17 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type17 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type17 = Instance.Symbology; }
@@ -250,7 +250,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode17 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber17 = listBox1.Items[i].ToString();
                         break;
-                    case 18:
+                    case 17:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type18 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type18 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type18 = Instance.Symbology; }
@@ -258,7 +258,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode18 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber18 = listBox1.Items[i].ToString();
                         break;
-                    case 19:
+                    case 18:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type19 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type19 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type19 = Instance.Symbology; }
@@ -266,7 +266,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode19 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber19 = listBox1.Items[i].ToString();
                         break;
-                    case 20:
+                    case 19:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type20 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type20 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type20 = Instance.Symbology; }
@@ -274,7 +274,7 @@ namespace BarcodeGeneration
                         InfoPass.Barcode20 = Instance.generateBarcodeToBitmap();
                         InfoPass.barcodenumber20 = listBox1.Items[i].ToString();
                         break;
-                    case 21:
+                    case 20:
                         if (Instance.CodeToEncode.Length == 11) { Instance.Symbology = Symbology.UPCA; InfoPass.type21 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 12) { Instance.Symbology = Symbology.EAN13; InfoPass.type21 = Instance.Symbology; }
                         if (Instance.CodeToEncode.Length == 13) { Instance.Symbology = Symbology.ITF14; InfoPass.type21 = Instance.Symbology; }
